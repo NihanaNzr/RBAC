@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBAC Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1>RBAC Admin</h1>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#user-management">Users</a></li>
+                    <li><a href="#role-management">Roles</a></li>
+                    <li><a href="#permission-management">Permissions</a></li>
+                    <li><a href="#resource-management">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <span>Admin User</span>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="dashboard" class="module">
+            <div class="container">
+                <h2>Dashboard</h2>
+                <div class="stats">
+                    <div class="card">Total Users: <span>1,234</span></div>
+                    <div class="card">Total Roles: <span>15</span></div>
+                    <div class="card">Total Permissions: <span>56</span></div>
+                    <div class="card">Total Resources: <span>28</span></div>
+                </div>
+                <div class="activity">
+                    <h3>Recent Activity</h3>
+                    <ul>
+                        <li>New user assigned: John Doe</li>
+                        <li>Role Editor assigned to user: Jane Smith</li>
+                        <li>New permission created: "Delete Articles"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="user-management" class="module">
+            <div class="container">
+                <h2>User Management</h2>
+                <div class="actions">
+                    <button>Add User</button>
+                    <input type="text" placeholder="Search users...">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td>Admin</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>jane@example.com</td>
+                            <td>Editor</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="role-management" class="module">
+            <div class="container">
+                <h2>Role Management</h2>
+                <div class="actions">
+                    <button>Add Role</button>
+                    <input type="text" placeholder="Search roles...">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Role Name</th>
+                            <th>Permissions</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Admin</td>
+                            <td>All permissions</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Editor</td>
+                            <td>Create, Edit, Delete content</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="permission-management" class="module">
+            <div class="container">
+                <h2>Permission Management</h2>
+                <div class="actions">
+                    <button>Add Permission</button>
+                    <input type="text" placeholder="Search permissions...">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Permission Name</th>
+                            <th>Category</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>View Users</td>
+                            <td>Read</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Create Posts</td>
+                            <td>Write</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="resource-management" class="module">
+            <div class="container">
+                <h2>Resource Management</h2>
+                <div class="actions">
+                    <button>Add Resource</button>
+                    <input type="text" placeholder="Search resources...">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resource Name</th>
+                            <th>Type</th>
+                            <th>Permissions</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>User API</td>
+                            <td>API</td>
+                            <td>View, Create, Update, Delete</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dashboard</td>
+                            <td>Page</td>
+                            <td>View</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RBAC Admin. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
